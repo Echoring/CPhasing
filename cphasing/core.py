@@ -1761,7 +1761,7 @@ class PairHeader:
     def _get_chromsize(self):
         _res = list(filter(lambda x: x[:10] == "#chromsize", self.header))
         
-        _res = [record.split(":")[1].split() for record in _res]
+        _res = [record.split(":", maxsplit=1)[1].split() for record in _res]
         db = OrderedDict()
         for chrom, size in _res:
             db[chrom] = int(size)

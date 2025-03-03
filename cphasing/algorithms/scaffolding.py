@@ -351,7 +351,7 @@ class Rename:
                     elif self.suffix_style == "upperletter":
                         new_chrom = f"{tmp_res[0]}{ascii_uppercase[int(hap_idx_db[tmp_res[0]]) - 1]}"
                     else:
-                        new_chrom = f"{tmp_res[0]}g{hap[1]}"
+                        new_chrom = f"{tmp_res[0]}g{hap_idx_db[tmp_res[0]]}"
 
                     tour_results[chrom2] = (tmp_res[0], new_chrom, tour)
 

@@ -309,6 +309,8 @@ class Rename:
             try:
                 tmp_res = res[chrom1]
             except KeyError:
+                tour_results[chrom1] = (f"unrenamed_{chrom1}", f"unrenamed_{chrom1}", Tour(f"raw_tour/{chrom1}.tour"))
+                renamed_chrom.append(f"unrenamed_{chrom1}")
                 continue 
             
             tour = Tour(f"raw_tour/{chrom1}.tour")
